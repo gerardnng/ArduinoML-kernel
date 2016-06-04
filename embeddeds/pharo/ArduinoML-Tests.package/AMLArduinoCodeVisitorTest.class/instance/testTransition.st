@@ -14,4 +14,4 @@ testTransition
         };
     build.
 	result := AMLArduinoCodeVisitor new formatTransition: app states first transition fromState: app states first.
-	self assert: result contents equals: 'if (digitalRead(button) == HIGH) {state_offline();} else {state_online();}'
+	self assert: result contents equals: 'if (digitalRead(button) == HIGH) {state_online();} else {state_offline();}'
