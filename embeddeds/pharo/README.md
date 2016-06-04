@@ -30,11 +30,11 @@ void setup(){
 }
 void state_offline(){
 	digitalWrite(led, LOW);
-	if (digitalRead(button) == HIGH) {state_offline();} else {state_online();}
+	if (digitalRead(button) == HIGH) {state_online();} else {state_offline();}
 }
 void state_online(){
 	digitalWrite(led, HIGH);
-	if (digitalRead(button) == LOW) {state_online();} else {state_offline();}
+	if (digitalRead(button) == LOW) {state_offline();} else {state_online();}
 }
 void loop(){
 	state_offline();
